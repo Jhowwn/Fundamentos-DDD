@@ -1,12 +1,12 @@
 import { Either, left, right } from '@/core/either'
-import { Answer } from '../../enterprise/entities/answer'
-import { AnswersRepository } from '../repositories/answers-repository'
-import { ResourceNotFoundError } from './Errors/resource-not-found'
-import { NotAllowedError } from './Errors/not-allowed-error'
-import { AnswerAttachmentList } from '../../enterprise/entities/answer-attachment-list'
-import { AnswerAttachment } from '../../enterprise/entities/answer-attachment'
 import { UniqueEntityID } from '@/core/entitites/unique-entity-id'
+import { NotAllowedError } from '../../../../core/errors/Errors/not-allowed-error'
+import { ResourceNotFoundError } from '../../../../core/errors/Errors/resource-not-found'
+import { Answer } from '../../enterprise/entities/answer'
+import { AnswerAttachment } from '../../enterprise/entities/answer-attachment'
+import { AnswerAttachmentList } from '../../enterprise/entities/answer-attachment-list'
 import { AnswersAttachmentsRepository } from '../repositories/answer-attachments-repository'
+import { AnswersRepository } from '../repositories/answers-repository'
 
 interface EditAnswerUseCaseRequest {
   authorId: string
